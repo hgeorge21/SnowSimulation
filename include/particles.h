@@ -6,11 +6,17 @@
 class Particle {
 
 public:
+	int n;
+
 	Eigen::MatrixXd q;
 	Eigen::MatrixXd v;
+	Eigen::VectorXd m;
+	Eigen::VectorXd rho;
+	Eigen::VectorXd vol;
 
-	Particle() {};
+	Eigen::VectorXd w; // weight function
 
+	Particle(const int& n_);
 
 	void move_particles(const double &dt);
 
